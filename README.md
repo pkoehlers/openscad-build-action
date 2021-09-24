@@ -25,10 +25,11 @@ This action uses OpenSCAD CLI to generate artifacts in Github Actions
 No outputs, only the generated files
 
 ## Example usage
-
+```
 uses: actions/openscad-Build-action@v1
 with:
   input-file: 'model.scad'
   output-file: 'output_with_something.stl'
   customizer-parameter-file: 'model.json'
   customizer-parameter-set: 'with_something'
+```
