@@ -26,7 +26,7 @@ No outputs, only the generated files
 
 ## Example usage
 ```
-uses: actions/openscad-Build-action@v1
+uses: pkoehlers/openscad-build-action@v1
 with:
   input-file: 'model.scad'
   output-file: 'output_with_something.stl'
