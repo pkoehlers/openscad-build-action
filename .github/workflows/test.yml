@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: [ master, main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: ./
+        with:
+          input-file: test/example.scad
+          output-file: test/example.stl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: example-stl
+          path: test/example.stl
