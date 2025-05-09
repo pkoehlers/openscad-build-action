@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM openscad/openscad:dev
 
-RUN apt-get update && apt-get install -y --no-install-recommends openscad
+USER root
 
 COPY entrypoint.sh /entrypoint.sh
 
